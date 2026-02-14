@@ -1,0 +1,7 @@
+Slice
+
+li = [0, 9, ..., 8]
+
+print(li[-2])
+
+print(li[2:-2])
