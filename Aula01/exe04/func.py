@@ -1,10 +1,17 @@
-def Ordenar(lista1, lista2):
-    ...
+def OrdenarVetor(x:list, y:list):
+    r = []
+    tam = len(x) + len(y)
+    temp = 0
+    for i in range(tam):
+        if(len(x) == 0): temp = y
+        
+        elif(len(y) == 0):  temp = x
+
+        elif(x[0] < y[0]): temp = x
+
+        elif(x[0] > y[0]): temp = y
+        else: temp = x
+        r.append(temp[0])
+        temp.pop(0)
     
-
-l1 = [2,10,33,70]
-l2 = [4, 11,15,20,77]
-
-lista = Ordenar(l1, l2)
-
-print(lista)
+    return r
