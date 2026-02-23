@@ -2,36 +2,28 @@ import  java.util.Scanner;
 // versão IntelliJ IDEA Community Edition 2023.2.2
 public class Main{
     public static  void main(String[] args){
-        double real, dolar,convert_real, convert_dolar, convert;
+        double real, dolar,convert_real, convert_dolar;
+        int escolha;
         Scanner scanner =  new Scanner(System.in);
 
-        dolar = 5.18;
+        dolar = 5.17;
+        
+        System.out.println("Escolha uma opção para converter:\nReais para dolar(1)\nDolar para reais(2)\n ");
+        escolha = scanner.nextInt();
 
-        System.out.println("Informe o valor em reais: ");
-        real = scanner.nextDouble();
-        convert_dolar = real / dolar;
-        convert_real = real * dolar;
 
-        System.out.printf("Real para dolar: $%.2f%n", convert_dolar);
-        System.out.printf("Dolar para real: R$%.2f%n", convert_real);
-//        int nasc, ano, anos;
-//        Scanner scanner =  new Scanner(System.in);
-//        String nome;
-//
-//        ano = 2026;
-//
-//        System.out.println("Informe seu nome: ");
-//        nome = scanner.nextLine();
-//
-//        scanner.nextLine();
-//
-//        System.out.println("Informe a sua data de nascimento: ");
-//        nasc = scanner.nextInt();
-//
-//        scanner.close();
-//
-//        anos = ano - nasc;
-//
-//        System.out.println( nome + " você nasceu em " + nasc + " ou seja a " + anos + " anos.");
+        if(escolha == 1){
+            System.out.println("Informe o valor em reais: ");
+            real = scanner.nextDouble();
+            convert_dolar = real / dolar;
+            System.out.printf("Real para dolar: $%.2f%n", convert_dolar);
+        }else if(escolha == 2){
+            System.out.println("Informe o valor em dolar: ");
+            real = scanner.nextDouble();
+            convert_real = real * dolar;
+            System.out.printf("Dolar para real: R$%.2f%n", convert_real);
+
+        }
+        scanner.close();
     }
 }
