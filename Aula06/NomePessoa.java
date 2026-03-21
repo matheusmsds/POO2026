@@ -19,18 +19,18 @@ public class NomePessoa {
         pessoas[1] = new Pessoa2("Bob", 18);
         pessoas[2] = new Pessoa2("Carl", 16);
 
-        Pessoa2 result = maiorIdade(pessoas);
+        String result = maiorIdade(pessoas);
         System.out.println("Pessoa com maior idade: ");
         System.out.println(result);
     }
-    public static void maiorIdade(Pessoa2[] vetor){
-        int maioridade = vetor[0];
-        String nome = vetor[0][1];
+    public static String maiorIdade(Pessoa2 [] vetor){
+        int maioridade = vetor[0].idade;
+        String nome = vetor[0].nome;
 
         for(int i = 0; i < vetor.length; i++){
-            if (vetor[i][1] > maioridade) {
-                maioridade = vetor[i];
-                nome = vetor[i][1];
+            if (vetor[i].idade > maioridade) {
+                maioridade = vetor[i].idade;
+                nome = vetor[i].nome;
             }
         }
         return nome;
