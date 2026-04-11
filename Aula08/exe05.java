@@ -1,16 +1,33 @@
 // este arquivo vai do exercico 12 até 14
+import java.util.Scanner;
+class Aluno{
+    String nome;
+    double nota;
+
+    Aluno(String nome, double notas){
+        this.nome = nome;
+        this.notas = nota;
+    }
+}
+
 public class exe05 {
     public static void main(String[] args) {
-        String nomes [] = {"Matheus", "Tadeu", "Bob"};
-        double notas [] = {6.0, 7.0, 6.0};
+        Scanner scanner = new Scanner(System.in);
+        Aluno [] vet = new Aluno[3];
 
-        double maiorNota = notas[0];
-        int indice = 0;
+        for(int i = 0; i < vet.length; i++){
+            vet[i].nome = scanner.nextLine();
+            vet[i].nota = scanner.nextDouble();
+        }
+
+        maiorNota = vet[0].nota;
+        nomeAluno = vet[0].nome;
+
         for(int i = 0; i < notas.length; i++){
-            if (maiorNota < notas[i]) {
-                indice = i;
+            if (maiorNota < vet[i].nota) {
+                nomeAluno = vet[i].nome;
             }
         }
-        System.out.println(nomes[indice]);
+        System.out.println(nomeAluno);
     }
 }
