@@ -14,11 +14,17 @@ class Pessoa {
 
 public class exe06 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        
         Pessoa[] vet = new Pessoa[3];
 
+        preencherVetor(vet);
+        logicaGeral(vet);
+
+    }
+    public static void preencherVetor(Pessoa vet []){
+        Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < vet.length; i++) {
-            
+
             String nome = scanner.nextLine();
             int idade = scanner.nextInt();
 
@@ -26,7 +32,8 @@ public class exe06 {
 
             vet[i] = new Pessoa(nome, idade);
         }
-
+    }
+    public static void logicaGeral(Pessoa vet[]){
         int maiorIdade = vet[0].idade;
         String nomePessoa = vet[0].nome;
 
@@ -37,8 +44,8 @@ public class exe06 {
         for (int i = 0; i < vet.length; i++) {
             if (maiorIdade < vet[i].idade) {
                 nomePessoa = vet[i].nome;
-            }else{
-               nomeMenorIdade = vet[i].nome;
+            } else {
+                nomeMenorIdade = vet[i].nome;
             }
             if (vet[i].idade > 18) {
                 contador++;
@@ -47,13 +54,10 @@ public class exe06 {
         }
 
         double media = soma / vet.length;
-        
 
         System.out.println("Nome da pessoa mais velha: " + nomePessoa);
         System.out.println("Nome da pessoa mais nova: " + nomeMenorIdade);
         System.out.println("Media das idades: " + media);
         System.out.println("Quantidade de pessoas com mais de 18 anos: " + contador);
-
-
     }
 }
