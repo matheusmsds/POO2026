@@ -1,0 +1,16 @@
+{
+        "Ana": {
+            "idade": 15,
+            "cidade": "Pvai"
+        },
+
+        "Bob": {
+            "idade": 20,
+            "cidade": "Mga"
+        },
+
+        "Carl": {
+            "idade": 18,
+            "cidade": "Loanda"
+        }
+}
