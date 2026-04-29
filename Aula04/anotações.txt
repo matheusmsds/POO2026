@@ -1,3 +1,0 @@
-No codigo do aquecimento.java usei um codigo mais complexo com vetores.
-
-E no Modosimples.java o jeito que o professor fez e mais simples.

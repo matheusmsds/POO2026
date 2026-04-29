@@ -1,0 +1,8 @@
+Fazer o trace e o desenho esquematico no carderno do codigo MaiorPessoa.java
+
+
+
+fiz o codigo separado entre outras classes
+
+
+mostrar pessoas menores que a média
