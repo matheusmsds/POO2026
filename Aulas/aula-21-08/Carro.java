@@ -27,5 +27,11 @@ public class Carro implements VeiculoMotorizado {
 
     }
 
+    @Override
+
+    public String toString() {
+        
+        return "Marca: " + this.marca + "\nCombustivel: " + this.combustivel + "\nKilometragem: " + this.km;
+    }
 
 }
