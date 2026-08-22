@@ -1,6 +1,15 @@
 public class Carro implements VeiculoMotorizado {
     int km;
-    int combustivel;
+    String marca;
+    int combustivel;    
+
+    public Carro(int km, int combustivel, String marca){
+        this.combustivel = 100;
+        this.km = 0;
+        this.marca = marca;
+    }
+
+
     public void deslocar(){
         System.out.println("Moto está se deslocando...");
         this.km++;
